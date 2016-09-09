@@ -1,5 +1,6 @@
 {
     "name": "mdbsh/mdbsh",
+    "version": "1.0.0",
     "type": "library",
     "description": "MongoDB Session Handler",
     "keywords": ["mongodb","session","php","handler","subversivo58"],
