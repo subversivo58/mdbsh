@@ -1,0 +1,24 @@
+{
+    "name": "mdbsh/mdbsh",
+    "type": "library",
+    "description": "MongoDB Session Handler",
+    "keywords": ["mongodb","session","php","handler","subversivo58"],
+    "homepage": "https://github.com/subversivo58/mdbsh",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lauro Moraes",
+            "email": "lauromoraes.poa.rs@gmail.com",
+            "homepage": "https://github.com/subversivo58/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "^1.0.2",
+    },
+    "autoload": {
+        "psr-4": {
+           "mdbsh\\": "mdbsh"
+        }
+    }
+}
