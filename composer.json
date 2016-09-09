@@ -14,12 +14,11 @@
         }
     ],
     "require": {
-        "mongodb/mongodb": "^1.0.2"
+        "mongodb/mongodb": "~1.0.2"
     },
     "autoload": {
         "psr-4": {
            "mdbsh\\": "mdbsh"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
