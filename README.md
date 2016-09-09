@@ -31,7 +31,7 @@ Store, retrieve `PHP` sessions in **MongoDB** database
 > 1. If you already have `Composer` on your project (and know how to use it):
 
 
-    composer require "mdbsh/mdbsh=^1.0.0"
+    composer require "mdbsh/mdbsh=^1.0.*"
     
 >2. Case no have `Composer`... [download](https://getcomposer.org/download/), after open|create the path of your project and inside, run `ComandLineTool` for use `Composer` to install... recalls from step 1? Up ;)
 
@@ -76,7 +76,7 @@ Define options (**optional**) instance on top of script example using `Composer`
     ];
     
     // instance the class
-    new \mdbsh\mdbsh\HandlerSessionManager($options);
+    new \SessionManager\HandlerSessionManager($options);
     
     // start sessions usual
     $_SESSION['foo'] = 'bar';
