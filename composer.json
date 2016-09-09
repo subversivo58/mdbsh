@@ -14,11 +14,12 @@
         }
     ],
     "require-dev": {
+        "php": ">=7.0",
         "mongodb/mongodb": "^1.0.2"
     },
     "autoload": {
         "psr-4": {
-           "SessionManager\\": "src/"
+           "HandlerSessionManager\\": "src"
         }
     }
 }
