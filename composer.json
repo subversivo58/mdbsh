@@ -1,10 +1,11 @@
 {
     "name": "mdbsh/mdbsh",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "library",
     "description": "MongoDB Session Handler",
-    "keywords": ["mongodb","session","php","handler","subversivo58"],
+    "keywords": ["mongodb","session","php","handler","crypto","subversivo58"],
     "homepage": "https://github.com/subversivo58/mdbsh",
+    "time": "2016-09-09 15:01:00",
     "license": "MIT",
     "authors": [
         {
@@ -14,9 +15,11 @@
             "role": "Developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/subversivo58/mdbsh/issues"  
+    },
     "require": {
-        "php": ">=7.0",
-        "mongodb/mongodb": "^1.0.2"
+        "php": ">=7.0"
     },
     "autoload": {
         "psr-4": {
