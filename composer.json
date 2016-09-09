@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "mongodb/mongodb": "^1.0.2",
+        "mongodb/mongodb": "^1.0.2"
     },
     "autoload": {
         "psr-4": {
