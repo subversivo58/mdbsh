@@ -1,3 +1,11 @@
+RELEASE 1.0.1
+-------------
+2016-09-29  Lauro Moraes  <lauromoraes.poa.rs@gmail.com>
+	* Removed "mongodb/mongodb=^1.0.2" from requeriments on composer.json file
+	* Add crypto|decrypto functions for session data content. Thank you very much Enrico Zimuel <https://github.com/ezimuel>
+	* Update files: composer.json, README.md and src/HandlerSessionManager.php
+
+
 RELEASE 1.0.0
 -------------
 2016-09-29  Lauro Moraes  <lauromoraes.poa.rs@gmail.com>
