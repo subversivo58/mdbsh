@@ -4,14 +4,15 @@
 
 Store, retrieve `PHP` sessions in **MongoDB** database
 
-
 ### Features:
 
 > PSR-4 compatible (like `Composer` as autoload)
 >
 > force-garbage (immediately remove expired sessions)
 >
-> token to access in another languages (like nodejs)
+> token to access in another server|services|...
+>
+> crypto function. Thanks Enrico Zimuel <https://github.com/ezimuel/PHP-Secure-Session>
 
 ### Requeriments:
 
@@ -19,10 +20,10 @@ Store, retrieve `PHP` sessions in **MongoDB** database
 
 + [MongoDB database](https://www.mongodb.com/download-center#community) on your system
 
-+ [MongoDB PHP Driver](https://github.com/mongodb/mongo-php-driver) on your `/ext` path of extensions and directive on your `php.ini` file e.g: **php_extension=mongodb.so** (Linux) or **php_extension=ongodb.dll (Windows)
++ [MongoDB PHP Driver](https://github.com/mongodb/mongo-php-driver) on your `/ext` path of extensions and directive on your `php.ini` file e.g: **php_extension=mongodb.so** (Linux) or **php_extension=ongodb.dll** (Windows)
 + [see on Pelc for manually download extensions](https://pecl.php.net/package/mongodb) [recomended version 1.1.7]
 
-+ [MongoDB PHP Library](https://github.com/mongodb/mongo-php-library) for **CRUD** operations [download during installation!version 1.0.2]
++ [MongoDB PHP Library](https://github.com/mongodb/mongo-php-library) for **CRUD** operations [recomended version 1.0.2]
 
 -------------------------------------
 ### Install:
@@ -51,10 +52,11 @@ Store, retrieve `PHP` sessions in **MongoDB** database
 Define options (**optional**) instance on top of script example using `Composer`:
 
 ```php
-   <?php
+<?php
+   // require autoloader
+   require __DIR__ . "/vendor/autoload.php";
+   
    /**
-    *@ignore set your options:
-    *
     *@param {string} databasename: (observe MongoDB rules e.g: database|DataBase|data-base) default: SessionManager
     *
     *@param {string} collection: (observe MongoDB rules e.g: session|SESSION|Session) default: PHPSESSID
@@ -62,9 +64,11 @@ Define options (**optional**) instance on top of script example using `Composer`
     *
     *@param {number} expire: time (sec) of expire session. default get `session.gc_maxlifetime` directive or set one hour (3600 sec)
     *
-    *@param {string} token: define your token to access in another languages (like nodejs). default: false
+    *@param {string} token: define your token to access in another server|services|... default: false
     *
     *@param {boolean} force_garbage: force the immediate removal of expired sessions. default: false
+    *
+    *@param {boolean} crypto: cryptographic|decryptographic data of sessions to save in MongoDB. default: true
     */
     // example of options
     $options = [
@@ -72,7 +76,8 @@ Define options (**optional**) instance on top of script example using `Composer`
        'collection'    => 'PHPSESSID',      // define session name (cookie name of this session)
        'expire'        =>  1440,            // it's don't is majority set. It is optional case php.ini no have value set
        'token'         =>  'my-poor-token', // 'YOUR_SUPER_ENCRYPTED_TOKEN' optional
-       'force_garbage' =>  true             // clean now
+       'force_garbage' =>  true,            // clean now
+       'encrypt'       =>  true             // encrypt data
     ];
     
     // instance the class
@@ -86,6 +91,12 @@ Define options (**optional**) instance on top of script example using `Composer`
 ```
 
 ------------------------------------------
+### Docs, examples and test cases:
+
+[see docs folder](https://github.com/subversivo58/mdbsh/docs)
+
+
+------------------------------------------
 ### Do you want to contribute?
 
 You want to improve the code? **send pull request!**
@@ -96,7 +107,13 @@ Found a mistake? Got a question or a suggestion? [open new issue!](https://githu
 
 
 -----------------------------------------
-###LICENSE
+### Acknowledgment:
+
+Many thanks to [Enrico Zimuel](https://github.com/ezimuel) the cryptographic functions available in your [
+PHP-Secure-Session](https://github.com/ezimuel/PHP-Secure-Session) repository that enables storing the contents of the encrypted session
+
+-----------------------------------------
+### LICENSE:
 
 LICENSE MIT
 
