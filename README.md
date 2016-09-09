@@ -76,12 +76,12 @@ Define options (**optional**) instance on top of script example using `Composer`
     ];
     
     // instance the class
-    new \SessionManager\HandlerSessionManager($options);
+    new \HandlerSessionManager($options);
     
     // start sessions usual
     $_SESSION['foo'] = 'bar';
     
-    // for use default values: new \mdbsh\mdbsh\HandlerSessionManager();
+    // for use default values: new \HandlerSessionManager();
    
 ```
 
