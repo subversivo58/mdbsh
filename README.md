@@ -15,6 +15,7 @@ Store, retrieve `PHP` sessions in **MongoDB** database
 > crypto function. Thanks Enrico Zimuel <https://github.com/ezimuel/PHP-Secure-Session>
 
 ### Requeriments:
++ [PHP 7.0](http://php.net/downloads.php) (minimum version required)
 
 + [Composer](https://getcomposer.org/download/) on your system
 
@@ -24,6 +25,13 @@ Store, retrieve `PHP` sessions in **MongoDB** database
 + [see on Pelc for manually download extensions](https://pecl.php.net/package/mongodb) [recomended version 1.1.7]
 
 + [MongoDB PHP Library](https://github.com/mongodb/mongo-php-library) for **CRUD** operations [recomended version 1.0.2]
+
+> Requeriments for encrypt | decrypt session data:
+> + [Openssl](https://www.openssl.org/) in your system (most Linux systems come with pre-installed SSL)
+  * in their PHP configuration file (php.ini) uncomment line **extension=php_openssl.so** (Linux) or **extension=php_openssl.dll** (Windows)
+>
+> + **mbstring**
+  * in their PHP configuration file (php.ini) uncomment line **extension=php_mbstring.so** (Linux) or **extension=php_mbstring.dll** (Windows)
 
 -------------------------------------
 ### Install:
@@ -68,7 +76,7 @@ Define options (**optional**) instance on top of script example using `Composer`
     *
     *@param {boolean} force_garbage: force the immediate removal of expired sessions. default: false
     *
-    *@param {boolean} crypto: cryptographic|decryptographic data of sessions to save in MongoDB. default: true
+    *@param {boolean} encrypt: cryptographic|decryptographic data of sessions to save in MongoDB. default: true
     */
     // example of options
     $options = [
