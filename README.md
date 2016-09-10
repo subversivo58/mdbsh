@@ -24,10 +24,10 @@ Store, retrieve `PHP` sessions in **MongoDB** database
 + [MongoDB PHP Driver](https://github.com/mongodb/mongo-php-driver) on your `/ext` path of extensions and directive on your `php.ini` file e.g: **php_extension=mongodb.so** (Linux) or **php_extension=ongodb.dll** (Windows)
 + [see on Pelc for manually download extensions](https://pecl.php.net/package/mongodb) [recomended version 1.1.7]
 
-+ [MongoDB PHP Library](https://github.com/mongodb/mongo-php-library) for **CRUD** operations [recomended version 1.0.2]
++ [MongoDB PHP Library](https://github.com/mongodb/mongo-php-library) for **CRUD** operations [installed by default]
 
 > Requeriments for encrypt | decrypt session data:
-> + [Openssl](https://www.openssl.org/) in your system (most Linux systems come with pre-installed SSL)
+> + [OpenSSL](https://www.openssl.org/) in your system (most Linux systems come with pre-installed SSL)
   * in their PHP configuration file (php.ini) uncomment line **extension=php_openssl.so** (Linux) or **extension=php_openssl.dll** (Windows)
 >
 > + **mbstring**
@@ -40,7 +40,7 @@ Store, retrieve `PHP` sessions in **MongoDB** database
 > **step 1**: If you already have `Composer` on your project (and know how to use it):
 
 
-    composer require "mdbsh/mdbsh":"dev-master"
+    composer require "mdbsh/mdbsh": "^1.0"
     
 >
 > **step 2**: Case no have `Composer`... [download](https://getcomposer.org/download/), after open|create the path of your project and inside, run `ComandLineTool` for use `Composer` to install... recalls from step 1? Up ;)
