@@ -102,7 +102,7 @@ Define options (**optional**) instance on top of script example using `Composer`
 ------------------------------------------
 ### Docs, examples and test cases:
 
-[see docs folder](https://github.com/subversivo58/mdbsh/docs/USAGE.md)
+[see docs folder](https://github.com/subversivo58/mdbsh/blob/master/docs/USAGE.md)
 
 
 ------------------------------------------
