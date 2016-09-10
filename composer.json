@@ -19,11 +19,14 @@
         "issues": "https://github.com/subversivo58/mdbsh/issues"  
     },
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.0",
+        "mongodb/mongodb": "1.0.*"
     },
     "autoload": {
         "psr-4": {
            "HandlerSessionManager\\": "src"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
