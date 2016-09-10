@@ -37,12 +37,13 @@ Store, retrieve `PHP` sessions in **MongoDB** database
 ### Install:
 
 **Soft Way:**
-> 1. If you already have `Composer` on your project (and know how to use it):
+> **step 1**: If you already have `Composer` on your project (and know how to use it):
 
 
     composer require "mdbsh/mdbsh":"dev-master"
     
->2. Case no have `Composer`... [download](https://getcomposer.org/download/), after open|create the path of your project and inside, run `ComandLineTool` for use `Composer` to install... recalls from step 1? Up ;)
+>
+> **step 2**: Case no have `Composer`... [download](https://getcomposer.org/download/), after open|create the path of your project and inside, run `ComandLineTool` for use `Composer` to install... recalls from step 1? Up ;)
 
 
 
