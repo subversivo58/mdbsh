@@ -24,8 +24,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace HandlerSessionManager;
-class HandlerSessionManager
+namespace Handler;
+
+// MongoDB PHP Library access
+use MongoDB;
+
+class Handler
 {
       private $dbCollection;
       private $dbSession;
