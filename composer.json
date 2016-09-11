@@ -1,6 +1,6 @@
 {
     "name": "mdbsh/mdbsh",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "type": "library",
     "description": "MongoDB Session Handler",
     "keywords": ["mongodb","session","php","handler","crypto","subversivo58"],
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-           "HandlerSessionManager\\": "src"
+           "Handler\\": "src"
         }
     },
     "minimum-stability": "dev",
