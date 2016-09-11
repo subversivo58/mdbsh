@@ -29,7 +29,7 @@ namespace Handler;
 // MongoDB PHP Library access
 use MongoDB;
 
-class Handler
+class Manager
 {
       private $dbCollection;
       private $dbSession;
